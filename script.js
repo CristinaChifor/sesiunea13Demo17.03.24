@@ -105,3 +105,37 @@ console.log(`Shopping basket: `, shoppingBasket);
 moveFromStockToBasket('Hat');
 console.log(`Current stock: `, stockProducts);
 console.log(`Shopping basket: `, shoppingBasket);
+
+// Functii anonime
+/**Sunt funcții ce le definim fără a fi nevoie sa le denumim dar le putem salva în variabile.
+ *  Folosirea lor va fi posibila prin folosirea variabilei în care este salvată funcția. Aceste funcții, optional, pot avea parametrii si valori de return.
+ */
+const printHello = function() {
+    console.log(`hello`);
+};
+
+printHello();
+
+function mapArray(arrayToMap, mappingFunction){
+    const newArray = [];
+    for(const element of arrayToMap) {
+        let mappingFunctionResult = mappingFunction(element)
+        newArray.push(mappingFunctionResult);
+
+    }
+    return newArray;
+}
+
+const arrayToMap = [1, 2, 3];
+const doubledArray = mapArray(arrayToMap, function(el) {
+    return el * 2;
+});
+
+console.log(`arrayToMap: ${arrayToMap}`);
+console.log(`doubledArray: ${doubledArray}`);
+
+const doubled2 = arrayToMap.map(function(el) {
+    return el * 2;
+});
+
+console.log(`doubled2: ${doubled2}`);
