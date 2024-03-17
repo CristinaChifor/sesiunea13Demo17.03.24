@@ -52,5 +52,28 @@ arrayHasElement(array2, valueToCheck1);
 arrayHasElement(array1, valueToCheck2);
 arrayHasElement(['ala', 'bala', 'portocala'], 'ala');
 
+// Functii cu return
+/** Sunt compuse din cuvantul cheie function urmat de numele funcției urmat de paranteze rotunde intre care definim
+ *  parametrii funcției (opțional) (param1, param2) urmate de paranteze acolade { } în interiorul cărora scriem liniile de cod 
+ * ce dorim sa fie executate în momentul apelarii funcției printre care trebuie sa existe și o linie de cod ce returnează o valoare folosind cuvantul cheie return urmat de valoare.
+ */
+
+function removeEvenNumbers(arrayToModify) {
+    const newArray = [];
+
+    for (const num of arrayToModify) {
+        //console.log(`num: `, num, 'result: ', num % 2);
+        if (num % 2 > 0) {
+            newArray.push(num);
+        }
+    }
+    return newArray;
+}
+
+const array1Modified = removeEvenNumbers(array1);
+console.log(`Modified array1 is: ${array1Modified}`);
+
+const array2Modified = removeEvenNumbers(array2);
+console.log(`Modified array2 is: ${array2Modified}`);
 
 
