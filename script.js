@@ -139,3 +139,33 @@ const doubled2 = arrayToMap.map(function(el) {
 });
 
 console.log(`doubled2: ${doubled2}`);
+
+// Arrow functions
+/**
+ * Funcțiile cu săgeată (Arrow functions) sunt o sintaxă mai concisă și mai compactă pentru definirea funcțiilor în JavaScript. 
+ * Această sintaxă a fost introdusă în ECMAScript 6 (ES6) și oferă o alternativă la modurile tradiționale de definire a funcțiilor. Arrow functions sunt adesea folosite pentru a simplifica codul și pentru a oferi o modalitate mai elegantă de a lucra cu funcții anonime.
+ */
+
+const sayHello = () => {
+    console.log(`Hello`);
+};
+
+sayHello();
+
+const sayHelloTo = (personName) => {
+    console.log(`Hello ${personName}`);
+};
+
+sayHelloTo(`Cristina`);
+
+const getGreeting = (greetedPerson) => {
+    return `Greetings ${greetedPerson}`;
+};
+
+let greeting = getGreeting('John');
+console.log(greeting);
+greeting = getGreeting('Maria');
+console.log(greeting);
+
+const doubled3 = arrayToMap.map(el => el * 2);
+console.log(`doubled3: ${doubled3}`);
