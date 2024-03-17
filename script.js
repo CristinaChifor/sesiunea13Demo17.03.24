@@ -19,3 +19,38 @@ function printDigits() {
 
 printDigits(); // apelam functia
 printDigits();
+
+// Functii cu parametri
+/**Sunt compuse din cuvantul cheie function urmat de numele funcției urmat de paranteze rotunde intre care definim parametrii funcției (param1, param2) 
+ * urmate de paranteze acolade { } în interiorul cărora scriem liniile de cod ce dorim sa fie executate în momentul apelarii funcției.
+ parametri = date de intrare intr-o functie
+*/
+
+function arrayHasElement(arrayToCheck, element) {
+    let found = false;
+    for (const elem of arrayToCheck) {
+        if (elem === element) {
+            found = true;
+            break;
+        }
+    }
+    if (found) {
+        console.log(`Array ${arrayToCheck} has element ${element}`);
+    } else {
+        console.log(`Array ${arrayToCheck} does not have element ${element}`);
+    }
+}
+
+const array1 = [1, 2, 3, 4, 5];
+const array2 = [3, 10, 21];
+const valueToCheck1 = 10;
+const valueToCheck2 = 30;
+
+// refolosim functia cu alte argumente
+arrayHasElement(array1, valueToCheck1);
+arrayHasElement(array2, valueToCheck1);
+arrayHasElement(array1, valueToCheck2);
+arrayHasElement(['ala', 'bala', 'portocala'], 'ala');
+
+
+
